@@ -14,13 +14,11 @@ Possible hands are, in descending order of value:
 8. Pair (two cards of the same rank). Tiebreaker is first the rank of the two cards, then the three other ranks.
 9. Nothing. Tiebreaker is the rank of the cards from high to low.
 
-Given hole cards and community cards, complete the function hand to return the type of hand (as written above, you can ignore case) and a list of ranks in decreasing order of significance, to use for comparison against other hands of the same type, of the best possible hand.
+Given hole cards and community cards, complete the function **hand** to return the type of hand (as written above, you can ignore case) and a list of ranks in decreasing order of significance, to use for comparison against other hands of the same type, of the best possible hand.
 ```C#
 Hand(new[] {"A♠", "A♦"}, new[] {"J♣", "5♥", "10♥", "2♥", "3♦"})
 // ...should return ("pair", new[] {"A", "J", "10", "5"})
-```
-```C#
 Hand(new[] {"A♠", "K♦"}, new[] {"J♥", "5♥", "10♥", "Q♥", "3♥"})
 // ...should return ("flush", new[] {"Q", "J", "10", "5", "3"})
 ```
-EDIT: for Straights with an Ace, only the ace-high straight is accepted. An ace-low straight is invalid (ie. A,2,3,4,5 is invalid). This is consistent with the author's reference solution. ~docgunthrop
+**EDIT:** for Straights with an Ace, only the ace-high straight is accepted. An ace-low straight is invalid (ie. A,2,3,4,5 is invalid). This is consistent with the author's reference solution. ~docgunthrop
